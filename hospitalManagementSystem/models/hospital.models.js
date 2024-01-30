@@ -20,7 +20,12 @@ const hospitalSchema = new  mongoose.Schema(
         city : {
             type : String ,
             required : true
-        }
+        },
+        specialization : [
+            {
+                type : String
+            }
+        ]
    }
  , {timestamp : true})
 
