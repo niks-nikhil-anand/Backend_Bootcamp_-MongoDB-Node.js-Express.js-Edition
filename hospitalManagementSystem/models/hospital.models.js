@@ -1,5 +1,27 @@
 import mongoose from "mongoose";
 
-const hospitalSchema = new  mongoose.Schema({}, {timestamp : true})
+const hospitalSchema = new  mongoose.Schema(
+    {
+        name : {
+            type : String ,
+            required : true
+        } ,
+        addressLine1 : {
+            type : String ,
+            required : true
+        },
+        addressLine2 : {
+            type : String ,
+        },
+        pinCode : {
+            type : Number ,
+            required : true
+        },
+        city : {
+            type : String ,
+            required : true
+        }
+   }
+ , {timestamp : true})
 
 export const Hospital = mongoose.model("Hospital" , hospitalSchema)
