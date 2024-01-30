@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const subTodoSchema = mongoose.Schema({
+const subTodoSchema = new mongoose.Schema({
     content : {
         type : String ,
         required: true
